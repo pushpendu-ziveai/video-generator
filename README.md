@@ -18,10 +18,12 @@ A minimal Python agent that generates short videos using AWS Bedrock's Stable Vi
    ```
 
 2. **Configure AWS credentials:**
+   **Quick Start:**
    ```bash
-   export AWS_ACCESS_KEY_ID="your_access_key"
-   export AWS_SECRET_ACCESS_KEY="your_secret_key"
-   export AWS_DEFAULT_REGION="us-east-1"
+   python3.13 -m pip install boto3
+   export AWS_ACCESS_KEY_ID="your_key"
+   export AWS_SECRET_ACCESS_KEY="your_secret"
+   python3.13 demo.py
    ```
 
 3. **Ensure Bedrock model access:**
@@ -51,7 +53,7 @@ generator.generate_multiple_videos(prompts, "output_videos/")
 
 ### Run Demo
 ```bash
-python3 video_generator.py
+python3.13 video_generator.py
 ```
 
 ## Code Structure

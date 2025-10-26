@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.13
 """
 Simple usage example for the AI Video Generator
 """
@@ -19,20 +19,21 @@ def main():
         prompt = "A serene mountain lake at dawn"
         print(f"Using default prompt: {prompt}")
     
-    output_name = input("Output filename (press Enter for 'my_video.mp4'): ").strip()
+    output_name = input("Output filename (press Enter for 'my_video_script.txt'): ").strip()
     if not output_name:
-        output_name = "my_video.mp4"
+        output_name = "my_video_script.txt"
     
-    print(f"\n🎬 Generating video: '{prompt}'")
-    print("⏳ This may take 30-60 seconds...")
+    print(f"\n🎬 Generating video script: '{prompt}'")
+    print("⏳ This may take 10-20 seconds...")
     
-    # Generate the video
+    # Generate the video script
     success = generator.generate_video(prompt, output_name)
     
     if success:
-        print(f"\n🎉 Success! Your video is ready: {output_name}")
+        print(f"\n🎉 Success! Your video script is ready: {output_name}")
+        print("💡 This is a detailed storyboard that can be used to create an actual video!")
     else:
-        print("\n😞 Video generation failed. Check your AWS configuration.")
+        print("\n😞 Video script generation failed. Check your AWS configuration.")
 
 if __name__ == "__main__":
     main()
